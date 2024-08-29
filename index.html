@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCalc - Calculador de Consumo de Combustível</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./img/Logo.png" alt="logo-easycalc">
+        <p>Calculador de Consumo de Combustível</p>
+
+        <label for="vehicle">Selecione o veículo:</label>
+        <select id="vehicle">
+            <option value="">Selecione...</option>
+            <option value="Carro compacto">Carro compacto</option>
+            <option value="Carro sedan">Carro sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Caminhonete">Caminhonete</option>
+            <option value="Moto">Moto</option>
+            <option value="Personalizado">Personalizado</option>
+        </select>
+
+        <label for="distance">Distância percorrida (km):</label>
+        <input type="number" id="distance" placeholder="Insira a distância">
+
+        <div id="custom-fuel-section" class="hidden">
+            <label for="customFuel">Combustível usado (litros):</label>
+            <input type="number" id="customFuel" placeholder="Combustível usado">
+        </div>
+
+        <button onclick="calculateFuel()">Calcular</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
